@@ -1,0 +1,102 @@
+.info_carousel img {
+  width: 100%;
+  height: 452px;
+  object-fit: cover;
+  -webkit-animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.info_carousel {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  flex-wrap: nowrap;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 1000ms ease-in-out;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.circle-list {
+  margin-top: 10px;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+}
+.circle-list img {
+  width: 30px;
+  height: 29px;
+}
+
+.info-logo_music {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-logo_music a {
+  font-size: 21px;
+  font-weight: 600;
+  color: #f2da85;
+  margin-top: 5px;
+}
+
+.info-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 83px;
+}
+
+.info-logos_delivery {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-logos_delivery a {
+  font-size: 21px;
+  font-weight: 600;
+  color: #f2da85;
+  margin-top: 5px;
+}
+
+.info-logos_percent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-logos_percent a {
+  font-size: 21px;
+  font-weight: 600;
+  color: #f2da85;
+  margin-top: 5px;
+}
