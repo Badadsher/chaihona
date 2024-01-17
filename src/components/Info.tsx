@@ -52,9 +52,18 @@ const Info: React.FC = () => {
         </CSSTransition>
       </div>
       <div className="circle-list">
-        <img src={circle}></img>
-        <img src={circle}></img>
-        <img src={circle}></img>
+        <img
+          src={circle}
+          className={currentPhoto == 0 ? "setcircle" : "normalcircle"}
+        ></img>
+        <img
+          className={currentPhoto == 1 ? "setcircle" : "normalcircle"}
+          src={circle}
+        ></img>
+        <img
+          className={currentPhoto == 2 ? "setcircle" : "normalcircle"}
+          src={circle}
+        ></img>
       </div>
       <div className="info-logo_music">
         <img src={music}></img>

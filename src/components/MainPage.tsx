@@ -13,7 +13,10 @@ import Soup from "../assets/restarauntimg/soup.jpg";
 import Sweet from "../assets/restarauntimg/sweet.jpg";
 import Plov from "../assets/restarauntimg/plov.png";
 import { CSSTransition } from "react-transition-group";
+
 import "./css/mainpage.css";
+import PopupZale from "./PopupZale";
+import ContactsPopup from "./ContactsPopup";
 const MainPage: React.FC = () => {
   const menuPhoto: Array<string> = [
     Bake,
@@ -30,12 +33,29 @@ const MainPage: React.FC = () => {
     Sweet,
   ];
 
+  const [isActiveBtnZale, setActiveBtnZale] = useState(false);
+  const [active, setActive] = useState(false);
+  const [isActiveContact, setActiveContact] = useState(false);
   const [currentSlide, setSlide] = useState(0);
+  const [currentFade, setFade] = useState("fade-in");
 
   useEffect(() => {
+    // const timer = setInterval(() => {
+    //   setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
+    //   setFade("fade-in");
+    // }, 6000);
+
     const timer = setInterval(() => {
       setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
-    }, 2000);
+      setFade("fade-in");
+      async function asyncFunction() {
+        setFade("fade-out");
+      }
+
+      setTimeout(async () => {
+        await asyncFunction();
+      }, 3000);
+    }, 6000);
 
     return () => {
       clearInterval(timer);
@@ -49,9 +69,9 @@ const MainPage: React.FC = () => {
         </div>
         <div className="right-panel">
           <div className="right-panel_up">
-            <p>КОНТАКТЫ</p>
-            <p>МЕНЮ</p>
-            <p>АРЕНДА ЗАЛА</p>
+            <a onClick={() => setActiveContact(true)}>КОНТАКТЫ</a>
+            <a href="#restarauntmenu">МЕНЮ</a>
+            <a onClick={() => setActiveBtnZale(true)}>АРЕНДА ЗАЛА</a>
           </div>
           <div className="right-panel_text">
             <h1>
@@ -61,7 +81,9 @@ const MainPage: React.FC = () => {
               <br />
               М. ДОМОДЕДОВСКАЯ М. НАГАТИНСКАЯ/КОЛОМЕНСКАЯ
             </h1>
-            <button>МЕНЮ</button>
+            <button>
+              <a href="#restarauntmenu">МЕНЮ</a>
+            </button>
           </div>
 
           <div className="right-panel_menu">
@@ -78,11 +100,16 @@ const MainPage: React.FC = () => {
               }}
             >
               <div className="right-panel_menu-photos">
-                <img src={menuPhoto[currentSlide]}></img>
                 <img
+                  className={currentFade}
+                  src={menuPhoto[currentSlide]}
+                ></img>
+                <img
+                  className={currentFade + 2}
                   src={menuPhoto[(currentSlide + 1) % menuPhoto.length]}
                 ></img>
                 <img
+                  className={currentFade + 3}
                   src={menuPhoto[(currentSlide + 2) % menuPhoto.length]}
                 ></img>
               </div>
@@ -90,6 +117,8 @@ const MainPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <ContactsPopup active={isActiveContact} setActive={setActiveContact} />
+      <PopupZale active={isActiveBtnZale} setActive={setActiveBtnZale} />
     </div>
   );
 };

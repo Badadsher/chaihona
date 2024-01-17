@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./leftpanel.css";
+import Popup from "../Popup";
 
 interface LeftPanelProps {
   Logo: string;
@@ -8,6 +9,7 @@ interface LeftPanelProps {
 }
 
 const LeftPanel: React.FC<LeftPanelProps> = ({ Logo, Arrow, ArrowLong }) => {
+  const [isActiveBtn, setActiveBtn] = useState(false);
   return (
     <div className="leftpanel">
       <div className="leftpanel-up">
@@ -16,9 +18,9 @@ const LeftPanel: React.FC<LeftPanelProps> = ({ Logo, Arrow, ArrowLong }) => {
       </div>
 
       <div className="leftpanel-center">
-        <p>МЫ НА КАРТЕ</p>
+        <a href="#map">МЫ НА КАРТЕ</a>
         <img src={Arrow}></img>
-        <p>БРОНЬ СТОЛИКА</p>
+        <a onClick={() => setActiveBtn(true)}>БРОНЬ СТОЛИКА</a>
         <img src={Arrow}></img>
       </div>
 
@@ -32,6 +34,7 @@ const LeftPanel: React.FC<LeftPanelProps> = ({ Logo, Arrow, ArrowLong }) => {
            ул. Нагатинская д. 16 <br /> +7 (968) 850 80 90
         </p>
       </div>
+      <Popup active={isActiveBtn} setActive={setActiveBtn} />
     </div>
   );
 };

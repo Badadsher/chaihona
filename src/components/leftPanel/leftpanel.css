@@ -39,13 +39,14 @@ div .leftpanel {
   text-align: center;
 }
 
-.leftpanel-center p {
+.leftpanel-center a {
   color: white;
   font-weight: 600;
   font-size: 20px;
+  text-decoration: none;
 }
 
-.leftpanel-center p:hover {
+.leftpanel-center a:hover {
   color: #f2da85;
   cursor: pointer;
 }

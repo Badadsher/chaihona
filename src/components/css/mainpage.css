@@ -21,15 +21,16 @@
   gap: 19px;
 }
 
-.right-panel_up p {
+.right-panel_up a {
   font-weight: 900;
   font-size: 15px;
   color: #f2da85;
   margin-top: 18px;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 
-.right-panel_up p:hover {
+.right-panel_up a:hover {
   color: #e9c234;
   cursor: pointer;
 }
@@ -60,20 +61,29 @@
   border: none;
 }
 
-.right-panel_text button:hover {
+.right-panel_text button > a {
+  font-size: 32px;
+  font-weight: 500;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.right-panel_text button:hover {
+  /* cursor: pointer;
   background-color: #e9c234;
-  color: white;
+  color: white; */
 }
 
 .right-panel_menu {
   display: flex;
 }
 
-.right-panel_menu img {
+.right-panel_menu img.fade-in {
   -webkit-animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -82,12 +92,48 @@
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -98,11 +144,33 @@
   z-index: 10;
   flex-direction: row;
   right: 0;
-
+  pointer-events: none;
   margin-top: 109px;
 }
 .right-panel_menu-photos img {
   width: 390px;
   height: 304px;
   border-radius: 26px;
+}
+
+.right-panel_menu img.fade-out {
+  -webkit-animation: fade-out 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation: fade-out 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+.right-panel_menu img.fade-out2 {
+  -webkit-animation: fade-out 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation: fade-out 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+.right-panel_menu img.fade-out3 {
+  -webkit-animation: fade-out 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation: fade-out 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.right-panel_menu img.fade-in2 {
+  -webkit-animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.right-panel_menu img.fade-in3 {
+  -webkit-animation: fade-in 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }

@@ -1,0 +1,29 @@
+.mapbar-content img {
+  margin-bottom: 30px;
+}
+
+.mapbar {
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 177px; */
+}
+
+.mapbar-content {
+  margin-top: 30px;
+}
+.mapbar-content_view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mapbar-content_view > a {
+  color: white;
+  font-size: 47px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.mapbar-content_view YMaps {
+  border-radius: 20px;
+}

@@ -7,24 +7,32 @@ import Logo from "./assets/restarauntimg/logo.svg";
 import Arrow from "./assets/restarauntimg/arrow.png";
 import ArrowLong from "./assets/restarauntimg/arrowlong.png";
 import Info from "./components/Info.js";
+import RestarauntMenu from "./components/RestarauntMenu.js";
+import MapBar from "./components/MapBar.js";
+import Footer from "./components/Footer.js";
 const App: React.FC = () => {
   return (
     <>
       <React.Fragment>
-        <div className="page">
-          <div className="left">
-            <LeftPanel
-              ArrowLong={ArrowLong}
-              Arrow={Arrow}
-              Logo={Logo}
-            ></LeftPanel>
-          </div>
+        <div>
+          <div className="page">
+            <div className="left">
+              <LeftPanel
+                ArrowLong={ArrowLong}
+                Arrow={Arrow}
+                Logo={Logo}
+              ></LeftPanel>
+            </div>
 
-          <div className="sections">
-            <Main></Main>
-            <Info></Info>
+            <div className="sections">
+              <Main></Main>
+              <Info></Info>
+              <RestarauntMenu></RestarauntMenu>
+              <MapBar></MapBar>
+            </div>
           </div>
         </div>
+        <Footer></Footer>
       </React.Fragment>
     </>
   );

@@ -1,0 +1,57 @@
+.restarauntmenu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 59px;
+}
+
+.restarauntmenu-list_object {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.restarauntmenu > div > h1 {
+  font-size: 102px;
+  color: #f2da85;
+  font-weight: 800;
+  margin-top: 195px;
+  margin-bottom: 35px;
+}
+
+.restarauntmenu > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restarauntmenu-list_object img {
+  border-radius: 29px;
+}
+
+.restarauntmenu-list_object a {
+  margin-top: 16px;
+  color: white;
+  margin-bottom: 8px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.restarauntmenu-list_object button {
+  width: 246px;
+  height: 45px;
+  background-color: #f2da85;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  border-radius: 24px;
+  border: none;
+  margin-bottom: 100px;
+}
+
+.restarauntmenu-list_object button:hover {
+  cursor: pointer;
+  background-color: #e9c234;
+  color: white;
+}

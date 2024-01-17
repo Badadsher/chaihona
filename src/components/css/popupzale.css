@@ -1,0 +1,76 @@
+.popup {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup_window {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+
+  z-index: 10;
+}
+
+.popup_window-top > a {
+  font-size: 20px;
+  color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.popup_window-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.popup_window button {
+  background: url(/src/assets/restarauntimg/close.svg);
+  background-repeat: no-repeat;
+  background-color: none;
+  width: 5px;
+  height: 10px;
+  border: none;
+  display: flex;
+}
+
+.popup_window button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .popup_window-prices a {
+    font-size: 10px;
+  }
+}
+
+.popup_window-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup_window-inputs-object {
+  display: flex;
+  flex-direction: column;
+}
