@@ -1,0 +1,106 @@
+.tablebuy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tablebuy-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablebuy-inputwindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 80px;
+}
+
+.tablebuy-inputwindow_view-object {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tablebuy-button {
+  margin-top: 30px;
+}
+
+.tablebuy-name > h1 {
+  font-size: 102px;
+  color: #f2da85;
+  font-weight: 800;
+  margin-top: 80px;
+}
+
+.tablebuy-inputwindow_view-object > a {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.tablebuy-inputwindow_view-object > input {
+  border: none;
+  height: 50px;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f2da85;
+  margin-left: 100px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 100px;
+}
+.tablebuy-inputwindow_view-object > input:focus {
+  outline: none;
+  background-color: #e9c234;
+}
+
+.tablebuy-inputwindow_view-object > select:focus {
+  outline: none;
+  background-color: #e9c234;
+}
+
+.tablebuy-inputwindow_view-object > select {
+  border: none;
+  height: 50px;
+  width: 500px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f2da85;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.view-object_first {
+  margin-top: 50px;
+}
+
+.tablebuy-button button {
+  width: 250px;
+  height: 70px;
+  margin-bottom: 100px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #f2da85;
+  border-radius: 15px;
+  border: none;
+}
+
+.tablebuy-button button:hover {
+  background-color: #e9c234;
+  cursor: pointer;
+}

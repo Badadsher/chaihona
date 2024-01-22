@@ -14,7 +14,7 @@ const MapBar: React.FC = () => {
       <div className="mapbar-content_view">
         <a>НАШЕ РАСПОЛОЖЕНИЕ</a>
         <YMaps>
-          <Map state={mapState} width="1000px" height="500px">
+          <Map state={mapState} width="900px" height="500px">
             <Placemark
               geometry={[55.609338, 37.722655]}
               properties={{

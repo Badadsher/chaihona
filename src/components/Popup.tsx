@@ -2,7 +2,7 @@ import React from "react";
 import "./css/popup.css";
 import { useState } from "react";
 import Close from "../assets/close.svg";
-import popupcss from "./css/popup.css";
+import "./css/popup.css";
 
 interface PopupProps {
   active: boolean;

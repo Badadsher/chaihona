@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
@@ -20,15 +20,14 @@
   pointer-events: all;
 }
 
-.popup_window {
+.popupzale_window {
   background-color: white;
   border-radius: 12px;
   padding: 20px;
-
   z-index: 10;
 }
 
-.popup_window-top > a {
+.popupzale_window-top > a {
   font-size: 20px;
   color: black;
   display: flex;
@@ -37,7 +36,7 @@
   font-weight: 700;
 }
 
-.popup_window-top {
+.popupzale_window-top {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,7 +44,7 @@
   margin-bottom: 20px;
 }
 
-.popup_window button {
+.popupzale_window > button {
   background: url(/src/assets/restarauntimg/close.svg);
   background-repeat: no-repeat;
   background-color: none;
@@ -55,22 +54,67 @@
   display: flex;
 }
 
-.popup_window button:hover {
+.popupzale_window button:hover {
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-  .popup_window-prices a {
+  .popupzale_window-prices a {
     font-size: 10px;
   }
 }
 
-.popup_window-inputs {
+.popupzale_window-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.popupzale_window-inputs-object {
   display: flex;
   flex-direction: column;
 }
-
-.popup_window-inputs-object {
+.popupzale_window-rent {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.popupzale_window-rent input {
+  border-radius: 10px;
+  background-color: #f2da85;
+  text-align: center;
+  border: none;
+  height: 30px;
+  width: 500px;
+}
+
+.popupzale_window-rent input:focus {
+  outline: none;
+  background-color: #e9c234;
+}
+
+.popupzale_window-rent a {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.popupzale_window-rentbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.popupzale_window-rentbtn button {
+  width: 200px;
+  height: 40px;
+  background-color: #f2da85;
+  font-weight: 800;
+  border-radius: 20px;
+  border: none;
+}
+
+.popupzale_window-rentbtn button:hover {
+  background-color: #e9c234;
+  cursor: pointer;
 }

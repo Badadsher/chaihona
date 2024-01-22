@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
@@ -20,7 +20,7 @@
   pointer-events: all;
 }
 
-.popup_window {
+.popupcontact_window {
   background-color: white;
   border-radius: 12px;
   padding: 20px;
@@ -28,7 +28,7 @@
   z-index: 10;
 }
 
-.popup_window-top > a {
+.popupcontact_window-top > a {
   font-size: 20px;
   color: black;
   display: flex;
@@ -37,7 +37,7 @@
   font-weight: 700;
 }
 
-.popup_window-top {
+.popupcontact_window-top {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,7 +45,7 @@
   margin-bottom: 20px;
 }
 
-.popup_window button {
+.popupcontact_window button {
   background: url(/src/assets/restarauntimg/close.svg);
   background-repeat: no-repeat;
   background-color: none;
@@ -55,22 +55,32 @@
   display: flex;
 }
 
-.popup_window button:hover {
+.popupcontact_window button:hover {
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-  .popup_window-prices a {
+  .popupcontact_window-prices a {
     font-size: 10px;
   }
 }
 
-.popup_window-inputs {
+.popupcontact_window-inputs {
   display: flex;
   flex-direction: column;
 }
 
-.popup_window-inputs-object {
+.popupcontact_window-inputs-object {
   display: flex;
   flex-direction: column;
+}
+
+.popupcontact_window-inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popupcontact_window-inputs a > span {
+  font-weight: 900;
 }

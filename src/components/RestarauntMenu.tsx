@@ -63,8 +63,8 @@ const RestarauntMenu: React.FC = () => {
 
           <div className="restarauntmenu-list_object">
             <img src={Bake}></img>
-            <a>СУПЫ</a>
-            <button>ВЫПЕЧКА</button>
+            <a>ВЫПЕЧКА</a>
+            <button>СМОТРЕТЬ</button>
           </div>
         </div>
         <div className="restarauntmenu-list">

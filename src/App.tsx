@@ -10,6 +10,7 @@ import Info from "./components/Info.js";
 import RestarauntMenu from "./components/RestarauntMenu.js";
 import MapBar from "./components/MapBar.js";
 import Footer from "./components/Footer.js";
+import TableBuy from "./components/TableBuy.js";
 const App: React.FC = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const App: React.FC = () => {
               <Main></Main>
               <Info></Info>
               <RestarauntMenu></RestarauntMenu>
+              <TableBuy></TableBuy>
               <MapBar></MapBar>
             </div>
           </div>
