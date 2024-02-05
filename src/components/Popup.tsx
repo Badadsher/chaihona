@@ -28,19 +28,19 @@ const Popup: React.FC<PopupProps> = ({ active, setActive }) => {
             <a>Имя</a>
             <input></input>
           </div>
-          <div className="popup_window-inputs-object input-name">
+          <div className="popup_window-inputs-object input-number">
             <a>Телефон</a>
             <input></input>
           </div>
-          <div className="popup_window-inputs-object input-name">
+          <div className="popup_window-inputs-object input-date">
             <a>Дата и время</a>
             <input></input>
           </div>
-          <div className="popup_window-inputs-object input-name">
+          <div className="popup_window-inputs-object input-amount">
             <a>Количество гостей</a>
             <input></input>
           </div>
-          <div className="popup_window-inputs-object input-name">
+          <div className="popup_window-inputs-object input-rest">
             <a>Выбирите ресторан</a>
             <select>
               <option value="someOption">ул. Генерала Белова д. 18б</option>

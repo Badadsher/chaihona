@@ -1,9 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
+import SoupData from "../jsons/soups.json";
 
-const Soup: React.FC = () => {
+import Shurpa from "../menuList/restMenu/soup/shurpa.jpg";
+import ChuchvaraShurpa from "../menuList/restMenu/soup/chuchvarashurpa.jpg";
+import ShurpaFrik from "../menuList/restMenu/soup/shurpafrik.jpg";
+import Mastava from "../menuList/restMenu/soup/mastava.jpg";
+import Lagman from "../menuList/restMenu/soup/lagmanuygur.jpg";
+import ChickenFrik from "../menuList/restMenu/soup/chickenfrik.jpg";
+import Okroshka from "../menuList/restMenu/soup/okroshka.jpg";
+import Borsh from "../menuList/restMenu/soup/borsh.jpg";
+import Tomatoe from "../menuList/restMenu/soup/tomatoe.jpg";
+import Order from "../Order";
+interface SoupProps {
+  onData: (product: Order) => void;
+  switcher: (action: string) => void;
+  active: boolean;
+}
+
+const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
+  const [buttonState, setButtonState] = useState(
+    Array.from({ length: SoupData.length }, () => false)
+  );
+
+  const imageArray = [
+    Shurpa,
+    ChuchvaraShurpa,
+    ShurpaFrik,
+    Mastava,
+    Lagman,
+    ChickenFrik,
+    Okroshka,
+    Borsh,
+    Tomatoe,
+  ];
+
+  // Функция для обработки нажатия кнопки
+  const handleButtonClick = (index: number, item: any) => {
+    // Создаем копию массива состояний кнопок
+    const newButtonState = [...buttonState];
+    // Изменяем состояние конкретной кнопки по индексу
+    newButtonState[index] = !newButtonState[index];
+    // Устанавливаем новое состояние
+    setButtonState(newButtonState);
+
+    onData({ id: item.id, title: item.name, price: item.price });
+  };
+
+  const switcherFunc = () => {
+    switcher("soup");
+    // setActive(!active);
+  };
+
   return (
-    <div>
-      <div></div>
+    <div
+      className={active ? "restarauntmenucold" : "restarauntmenuoff"}
+      id="restarauntmenu"
+    >
+      <button onClick={() => switcherFunc()}>ВЕРНУТЬСЯ</button>
+      <div className="menu-container">
+        {SoupData.map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[index]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(index, item)}>
+              {buttonState[index] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -43,7 +43,7 @@
   margin-bottom: 20px;
 }
 
-.popup_window button {
+.popup_window > button {
   background: url(/src/assets/restarauntimg/close.svg);
   background-repeat: no-repeat;
   background-color: none;
@@ -71,4 +71,51 @@
 .popup_window-inputs-object {
   display: flex;
   flex-direction: column;
+}
+
+.popup_windowzakaz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+}
+
+.popup_windowzakaz button {
+  background-color: #f2da85;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.popup_windowzakaz button:hover {
+  background-color: #e9c234;
+  cursor: pointer;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.sumPrice {
+  font-weight: 800;
+}
+
+.valueWaiter {
+  display: flex;
+  flex-direction: column;
+}
+
+.valueWaiter input {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: rgb(192, 192, 192);
 }

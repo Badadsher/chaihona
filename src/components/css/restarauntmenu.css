@@ -11,6 +11,13 @@
   flex-direction: column;
 }
 
+.restarauntmenuoff {
+  display: none;
+}
+
+.restarauntmenu {
+}
+
 .restarauntmenu > div > h1 {
   font-size: 102px;
   color: #f2da85;
