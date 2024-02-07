@@ -119,3 +119,9 @@
   border: none;
   background-color: rgb(192, 192, 192);
 }
+
+.popup_windowzakaz {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 600px;
+}

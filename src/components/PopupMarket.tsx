@@ -17,10 +17,22 @@ const PopupMarket: React.FC<PopupProps> = ({
   selectedProducts,
 }) => {
   const [number, setNumber] = useState("");
+  const [name, setName] = useState("");
+  const [geo, setGeo] = useState("");
   const handleButtonClick = (action: string) => {
-    console.log(selectedProducts);
-    var jsonData = JSON.stringify(selectedProducts);
-    if (selectedProducts != null && number != "") {
+    // var formattedOrders = selectedProducts.map(function (order) {
+    //   return {
+    //     title: order.title,
+    //     price: order.price,
+    //   };
+    // });
+
+    var formattedOrders = selectedProducts.map(
+      (product) => `${product.title}-ЦЕНА ${product.price}Р`
+    );
+    var dataToSend = formattedOrders.join(",");
+    let price = selectedProducts.reduce((total, item) => total + item.price, 0);
+    if (selectedProducts != null && number != "" && geo != "" && name != "") {
       // Отправка данных на сервер
       fetch("http://localhost:8080/yalla/checker.php", {
         mode: "no-cors",
@@ -31,7 +43,10 @@ const PopupMarket: React.FC<PopupProps> = ({
         body: JSON.stringify({
           numbervalue: number,
           action: action,
-          order: jsonData,
+          order: dataToSend,
+          price: price,
+          name: name,
+          geo: geo,
         }),
       })
         .then((response) => response.text()) // Используем text() вместо json()
@@ -50,6 +65,7 @@ const PopupMarket: React.FC<PopupProps> = ({
           console.error("Ошибка при отправке данных:", error);
         });
       alert("Заявка отправлена!");
+      window.location.reload();
     } else {
       alert("Заполните все поля");
     }
@@ -73,20 +89,28 @@ const PopupMarket: React.FC<PopupProps> = ({
             {selectedProducts.map((item) => (
               <div className="order">
                 <a>{item.title}-</a>
-                <p>{item.price}</p>
+                <p>{item.price}Р</p>
               </div>
             ))}
           </div>
           <div>
             <a className="sumPrice">
               ИТОГОВАЯ ЦЕНА:
-              {selectedProducts.reduce((total, item) => total + item.price, 0)}
+              {selectedProducts.reduce((total, item) => total + item.price, 0)}Р
             </a>
           </div>
           <div className="valueWaiter">
             <input
               placeholder="ТЕЛЕФОН"
               onChange={(e) => setNumber(e.target.value)}
+            ></input>{" "}
+            <input
+              placeholder="ИМЯ"
+              onChange={(e) => setName(e.target.value)}
+            ></input>{" "}
+            <input
+              placeholder="АДРЕС"
+              onChange={(e) => setGeo(e.target.value)}
             ></input>{" "}
             <button onClick={() => handleButtonClick("zakaz")}>ЗАКАЗАТЬ</button>
           </div>

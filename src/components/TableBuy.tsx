@@ -57,6 +57,7 @@ const TableBuy: React.FC = () => {
           console.error("Ошибка при отправке данных:", error);
         });
       alert("Заявка отправлена!");
+      window.location.reload();
     } else {
       alert("Заполните все поля");
     }

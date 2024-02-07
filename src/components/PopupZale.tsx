@@ -41,6 +41,7 @@ const PopupZale: React.FC<PopupZaleProps> = ({ active, setActive }) => {
           console.error("Ошибка при отправке данных:", error);
         });
       alert("Заявка отправлена!");
+      window.location.reload();
     } else {
       alert("Заполните все поля");
     }
