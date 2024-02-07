@@ -75,3 +75,12 @@ div .leftpanel {
   font-size: 13px;
   color: #f2da85;
 }
+
+@media screen and (max-width: 767px) {
+  .leftpanel {
+    display: none;
+  }
+  .right-panel_up {
+    display: none;
+  }
+}

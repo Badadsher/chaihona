@@ -1,3 +1,7 @@
+.main-elements_navbar {
+  display: none;
+}
+
 .main-elements {
   display: flex;
   flex-direction: row;
@@ -173,4 +177,74 @@
 .right-panel_menu img.fade-in3 {
   -webkit-animation: fade-in 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@media screen and (max-width: 767px) {
+  .main-image img {
+    width: 100%;
+    height: 40%;
+  }
+  .main-image {
+    width: auto;
+  }
+  .main-elements {
+    flex-direction: column;
+  }
+  .right-panel_menu-photos {
+    top: 20%;
+    gap: 8px;
+  }
+  .right-panel_menu-photos img {
+    width: 125px;
+    height: 105px;
+    gap: 8px;
+    right: none;
+  }
+
+  .right-panel_text button {
+    width: 188px;
+    height: 66px;
+    margin-top: 16px;
+  }
+  .right-panel_text button > a {
+    font-size: 25px;
+  }
+
+  .right-panel_text > h1 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .main-elements_navbar {
+    display: flex;
+    height: 79px;
+    color: white;
+    align-items: center;
+    font-size: 9px;
+  }
+
+  .main-elements-mid {
+    display: flex;
+    gap: 15px;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+
+  .main-elements-left {
+    margin-left: 19px;
+  }
+  .main-elements-left > img {
+    width: 60px;
+    height: 56px;
+    border-radius: 11px;
+  }
+
+  .main-elements-right > button > img {
+    width: 42px;
+    height: 39px;
+  }
+  .main-elements-right > button {
+    background: none;
+    border: none;
+  }
 }

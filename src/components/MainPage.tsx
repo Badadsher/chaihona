@@ -12,12 +12,22 @@ import Salat from "../assets/restarauntimg/salat.jpg";
 import Soup from "../assets/restarauntimg/soup.jpg";
 import Sweet from "../assets/restarauntimg/sweet.jpg";
 import Plov from "../assets/restarauntimg/plov.png";
+import Other from "../assets/restarauntimg/logos/other.png";
+import Close from "../assets/restarauntimg/logos/close.png";
+import Logo from "../assets/restarauntimg/logo.svg";
 import { CSSTransition } from "react-transition-group";
 
 import "./css/mainpage.css";
 import PopupZale from "./PopupZale";
 import ContactsPopup from "./ContactsPopup";
 const MainPage: React.FC = () => {
+  const navRef = useRef();
+  const showNavbar = () => {
+    if (navRef.current) {
+      navRef.current.classList.toggle("responsive_nav");
+    }
+  };
+
   const menuPhoto: Array<string> = [
     Bake,
     BeerEat,
@@ -44,7 +54,6 @@ const MainPage: React.FC = () => {
     //   setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
     //   setFade("fade-in");
     // }, 6000);
-
     const timer = setInterval(() => {
       setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
       setFade("fade-in");
@@ -64,6 +73,40 @@ const MainPage: React.FC = () => {
   return (
     <div className="main">
       <div className="main-elements">
+        <div className="main-elements_navbar">
+          <div className="main-elements-left">
+            <img src={Logo}></img>
+          </div>
+          <div className="main-elements-mid">
+            <a>МЫ НА КАРТЕ</a>
+            <a>БРОНЬ СТОЛИКА</a>
+          </div>
+
+          <nav ref={navRef}>
+            <a href="/#" onClick={showNavbar}>
+              Главная
+            </a>
+            <a href="#menu" onClick={showNavbar}>
+              Работы
+            </a>
+            <a href="/#about" onClick={showNavbar}>
+              Обо мне
+            </a>
+            <a href="/#contact" onClick={showNavbar}>
+              Контакты
+            </a>
+            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+              <img src={Other} onClick={showNavbar}></img>
+            </button>
+          </nav>
+
+          <div className="main-elements-right">
+            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+              <img src={Other}></img>
+            </button>
+          </div>
+        </div>
+
         <div className="main-image">
           <img src={Plov}></img>
         </div>
