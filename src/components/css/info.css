@@ -104,3 +104,42 @@
 .normalcircle {
   opacity: 10%;
 }
+
+@media screen and (max-width: 767px) {
+  .info_carousel {
+    height: 170px;
+  }
+
+  .info-logos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-logo_music {
+    margin-bottom: 83px;
+  }
+
+  .info-logo_music img {
+    width: 141px;
+  }
+
+  .info-logos_delivery a {
+    font-size: 15px;
+  }
+
+  .info-logos_delivery img {
+    width: 141px;
+  }
+
+  .info-logos_percent a {
+    font-size: 15px;
+  }
+
+  .info-logos_percent img {
+    width: 141px;
+  }
+
+  .info-logo_music a {
+    font-size: 15px;
+  }
+}

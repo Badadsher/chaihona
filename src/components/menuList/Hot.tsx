@@ -72,6 +72,72 @@ const Hot: React.FC<HotProps> = ({ onData, switcher, active }) => {
           </div>
         ))}
       </div>
+
+      <div className="menu-container_mobile">
+        {HotData.slice(0, 2).map((item, index) => (
+          <div key={item.id} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotData.slice(2, 4).map((item, index) => (
+          <div key={item.id} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotData.slice(4, 6).map((item, index) => (
+          <div key={item.id} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotData.slice(6, 8).map((item, index) => (
+          <div key={item.id} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotData.slice(8, 10).map((item, index) => (
+          <div key={item.id} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

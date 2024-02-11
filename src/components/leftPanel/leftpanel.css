@@ -40,7 +40,7 @@ div .leftpanel {
 }
 
 .leftpanel-center a {
-  color: white;
+  color: white !important;
   font-weight: 600;
   font-size: 20px;
   text-decoration: none;

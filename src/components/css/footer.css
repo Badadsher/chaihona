@@ -70,3 +70,32 @@
   font-size: 22px;
   font-weight: 800;
 }
+
+@media screen and (max-width: 767px) {
+  .footer_logo {
+    display: none;
+  }
+
+  .footer_number {
+    display: none;
+  }
+
+  .footer_text-func a {
+    font-size: 11px !important;
+  }
+
+  .footer_text-func {
+    margin-top: 29px;
+    margin-bottom: 7px;
+  }
+
+  .footer_text p {
+    margin-bottom: 13px;
+  }
+
+  .footer {
+    margin-top: 192px;
+    display: flex;
+    justify-content: center;
+  }
+}

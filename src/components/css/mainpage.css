@@ -182,7 +182,7 @@
 @media screen and (max-width: 767px) {
   .main-image img {
     width: 100%;
-    height: 40%;
+    height: 310px;
   }
   .main-image {
     width: auto;
@@ -192,7 +192,8 @@
   }
   .right-panel_menu-photos {
     top: 20%;
-    gap: 8px;
+    gap: 12px;
+    right: auto;
   }
   .right-panel_menu-photos img {
     width: 125px;
@@ -204,10 +205,10 @@
   .right-panel_text button {
     width: 188px;
     height: 66px;
-    margin-top: 16px;
+    margin-top: 25px;
   }
   .right-panel_text button > a {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .right-panel_text > h1 {
@@ -246,5 +247,26 @@
   .main-elements-right > button {
     background: none;
     border: none;
+  }
+
+  .main-elements {
+    min-height: auto;
+  }
+
+  .right-panel_text button {
+    margin-bottom: 20px;
+  }
+
+  .main-elements-mid a {
+    text-decoration: none;
+  }
+
+  .right-panel_menu-photos {
+    /* right: unset; */
+  }
+
+  .right-panel_menu {
+    align-items: center;
+    justify-content: center;
   }
 }

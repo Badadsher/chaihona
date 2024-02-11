@@ -208,6 +208,99 @@ const RestarauntMenu: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <div className="mobilelist">
+          <div className="restarauntmenu-list">
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={Cold}></img>
+                <a>ХОЛОДНЫЕ ЗАКУСКИ</a>
+                <button onClick={() => switchKatalog("cold")}>СМОТРЕТЬ</button>
+              </div>
+              <div className="restarauntmenu-list_object">
+                <img src={Salat}></img>
+                <a>САЛАТЫ</a>
+                <button onClick={() => switchKatalog("salat")}>СМОТРЕТЬ</button>
+              </div>
+            </div>
+
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={HotZak}></img>
+                <a>ГОРЯЧИЕ ЗАКУСКИ</a>
+                <button onClick={() => switchKatalog("hot")}>СМОТРЕТЬ</button>
+              </div>
+
+              <div className="restarauntmenu-list_object">
+                <img src={Soup}></img>
+                <a>СУПЫ</a>
+                <button onClick={() => switchKatalog("soup")}>СМОТРЕТЬ</button>
+              </div>
+            </div>
+          </div>
+          <div className="restarauntmenu-list">
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={Fish}></img>
+                <a>РЫБНЫЕ БЛЮДА</a>
+                <button onClick={() => switchKatalog("fish")}>СМОТРЕТЬ</button>
+              </div>
+              <div className="restarauntmenu-list_object">
+                <img src={Hot}></img>
+                <a>ГОРЯЧИЕ БЛЮДА</a>
+                <button onClick={() => switchKatalog("hotfood")}>
+                  СМОТРЕТЬ
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={Lula}></img>
+                <a>БЛЮДА НА УГЛЯХ</a>
+                <button onClick={() => switchKatalog("lula")}>СМОТРЕТЬ</button>
+              </div>
+
+              <div className="restarauntmenu-list_object">
+                <img src={Bake}></img>
+                <a>ВЫПЕЧКА</a>
+                <button onClick={() => switchKatalog("bake")}>СМОТРЕТЬ</button>
+              </div>
+            </div>
+          </div>
+          <div className="restarauntmenu-list">
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={Garnir}></img>
+                <a>ГАРНИРЫ</a>
+                <button onClick={() => switchKatalog("garnir")}>
+                  СМОТРЕТЬ
+                </button>
+              </div>
+              <div className="restarauntmenu-list_object">
+                <img src={Sweet}></img>
+                <a>ДЕСЕРТЫ</a>
+                <button onClick={() => switchKatalog("sweet")}>СМОТРЕТЬ</button>
+              </div>
+            </div>
+
+            <div>
+              <div className="restarauntmenu-list_object">
+                <img src={BeerEat}></img>
+                <a>ЗАКУСКИ К ПИВУ</a>
+                <button onClick={() => switchKatalog("zakuska")}>
+                  СМОТРЕТЬ
+                </button>
+              </div>
+
+              <div className="restarauntmenu-list_object">
+                <img src={Drink}></img>
+                <a>НАПИТКИ</a>
+                <button>СМОТРЕТЬ</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <MarketFC
         active={marketState}

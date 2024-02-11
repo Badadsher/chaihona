@@ -3,7 +3,7 @@ import "./App.css";
 import Main from "./components/MainPage.jsx";
 import LeftPanel from "./components/leftPanel/LeftPanel.js";
 
-import Logo from "./assets/restarauntimg/logo.svg";
+import Logo from "./assets/restarauntimg/logonew.png";
 import Arrow from "./assets/restarauntimg/arrow.png";
 import ArrowLong from "./assets/restarauntimg/arrowlong.png";
 import Info from "./components/Info.js";

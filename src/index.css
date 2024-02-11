@@ -44,3 +44,7 @@ body::-webkit-scrollbar-track:horizontal {
   border-radius: 10px;
   background-color: #f9f9fd00;
 }
+
+a:visited {
+  color: inherit;
+}

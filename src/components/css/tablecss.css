@@ -104,3 +104,27 @@
   background-color: #e9c234;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .tablebuy-name > h1 {
+    font-size: 50px;
+  }
+
+  .tablebuy-inputwindow_view {
+    width: 350px;
+    height: 600px;
+  }
+
+  .tablebuy-name {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tablebuy-inputwindow_view-object input {
+    width: auto;
+  }
+
+  .tablebuy-inputwindow_view-object select {
+    width: auto;
+  }
+}

@@ -77,6 +77,85 @@ const HotFood: React.FC<HotFoodProps> = ({ onData, switcher, active }) => {
           </div>
         ))}
       </div>
+
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(0, 2).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(2, 4).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(4, 6).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(6, 8).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(8, 10).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(10, 12).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

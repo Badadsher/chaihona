@@ -70,6 +70,72 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
           </div>
         ))}
       </div>
+
+      <div className="menu-container_mobile">
+        {SoupData.slice(0, 2).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SoupData.slice(2, 4).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SoupData.slice(4, 6).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SoupData.slice(6, 8).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SoupData.slice(8, 9).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

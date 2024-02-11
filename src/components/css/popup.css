@@ -125,3 +125,16 @@
   overflow-y: scroll;
   max-height: 600px;
 }
+
+.order a {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .popup_window {
+    width: 300px;
+  }
+  .popup_windowzakaz {
+    width: auto;
+  }
+}

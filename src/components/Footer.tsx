@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/footer.css";
-import logo from "../assets/restarauntimg/logo.svg";
+import logo from "../assets/restarauntimg/logonew.png";
 const Footer: React.FC = () => {
   return (
     <div className="footer">
