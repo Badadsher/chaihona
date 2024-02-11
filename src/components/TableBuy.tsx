@@ -72,20 +72,28 @@ const TableBuy: React.FC = () => {
       <div className="tablebuy-inputwindow">
         <div className="tablebuy-inputwindow_view">
           <div className="tablebuy-inputwindow_view-object view-object_first">
-            <a>Имя</a>
-            <input onChange={(e) => setName(e.target.value)}></input>
+            <input
+              placeholder="Имя"
+              onChange={(e) => setName(e.target.value)}
+            ></input>
           </div>
           <div className="tablebuy-inputwindow_view-object">
-            <a>Телефон</a>
-            <input onChange={(e) => setNumber(e.target.value)}></input>
+            <input
+              placeholder="Телефон"
+              onChange={(e) => setNumber(e.target.value)}
+            ></input>
           </div>
           <div className="tablebuy-inputwindow_view-object">
-            <a>Дата и время</a>
-            <input onChange={(e) => setData(e.target.value)}></input>
+            <input
+              placeholder="Дата и время"
+              onChange={(e) => setData(e.target.value)}
+            ></input>
           </div>
           <div className="tablebuy-inputwindow_view-object">
-            <a>Количество гостей</a>
-            <input onChange={(e) => setGuest(e.target.value)}></input>
+            <input
+              placeholder="Кол-во гостей"
+              onChange={(e) => setGuest(e.target.value)}
+            ></input>
           </div>
           <div className="tablebuy-inputwindow_view-object">
             <a>Выбирите ресторан</a>

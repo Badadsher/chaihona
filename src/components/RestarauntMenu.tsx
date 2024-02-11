@@ -28,6 +28,7 @@ import MarketFC from "./PopupMarket.tsx";
 
 import Market from "../assets/restarauntimg/logos/market.png";
 import "./css/restarauntmenu.css";
+import Drinks from "./menuList/Drinks.tsx";
 
 const RestarauntMenu: React.FC = () => {
   const [marketState, setMarketState] = useState(false);
@@ -47,7 +48,7 @@ const RestarauntMenu: React.FC = () => {
   const [activeGarnir, setActiveGarnir] = useState(false);
   const [activeSweet, setActiveSweet] = useState(false);
   const [activeZakuska, setActiveZakuska] = useState(false);
-
+  const [activeDrinks, setActiveDrinks] = useState(false);
   const switchKatalog = (action: string) => {
     if (katalogState) {
       setKatalogState(false);
@@ -100,6 +101,10 @@ const RestarauntMenu: React.FC = () => {
         setActiveZakuska(!activeZakuska);
         break;
 
+      case "drinks":
+        setActiveDrinks(!activeDrinks);
+
+        break;
       default:
         break;
     }
@@ -203,7 +208,7 @@ const RestarauntMenu: React.FC = () => {
             <div className="restarauntmenu-list_object">
               <img src={Drink}></img>
               <a>НАПИТКИ</a>
-              <button>СМОТРЕТЬ</button>
+              <button onClick={() => switchKatalog("drinks")}>СМОТРЕТЬ</button>
             </div>
           </div>
         </div>
@@ -295,7 +300,9 @@ const RestarauntMenu: React.FC = () => {
               <div className="restarauntmenu-list_object">
                 <img src={Drink}></img>
                 <a>НАПИТКИ</a>
-                <button>СМОТРЕТЬ</button>
+                <button onClick={() => switchKatalog("drinks")}>
+                  СМОТРЕТЬ
+                </button>
               </div>
             </div>
           </div>
@@ -361,6 +368,12 @@ const RestarauntMenu: React.FC = () => {
         switcher={switchKatalog}
         active={activeZakuska}
       ></ZakuskaFC>
+
+      <Drinks
+        onData={addToCart}
+        switcher={switchKatalog}
+        active={activeDrinks}
+      ></Drinks>
     </div>
   );
 };

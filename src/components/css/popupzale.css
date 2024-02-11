@@ -118,3 +118,25 @@
   background-color: #e9c234;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .popupzale_window {
+    width: 300px;
+  }
+  .popupzale_window-inputs {
+    color: black;
+    font-size: 15px;
+  }
+
+  .popupzale_window-rent input {
+    width: auto;
+  }
+}
+
+.popupzale_window {
+  color: black !important;
+}
+
+.popupzale_window-inputs a {
+  color: black !important;
+}

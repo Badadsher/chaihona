@@ -1,7 +1,10 @@
 import Close from "../assets/restarauntimg/logos/close.png";
 import Arrow from "../assets/restarauntimg/arrow.png";
 import ArrowLong from "../assets/restarauntimg/arrowlong.png";
+import ContactsPopup from "./ContactsPopup";
+import PopupZale from "./PopupZale";
 import "./css/navbar.css";
+import { useState } from "react";
 interface NavbarProps {
   showNavbar: () => void;
   active: boolean;
@@ -9,17 +12,15 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ showNavbar, active }) => {
+  const [isActiveBtnZale, setActiveBtnZale] = useState(false);
+  const [isActiveContact, setActiveContact] = useState(false);
   return (
     <header className={active ? "navbaractive" : "navbaroff"}>
       <nav>
         <div className="leftpanel-center">
-          <a href="#map" onClick={showNavbar}>
-            МЫ НА КАРТЕ
-          </a>
+          <a onClick={() => setActiveContact(true)}>КОНТАКТЫ</a>
           <img src={Arrow}></img>
-          <a href="#tablebuyicon" onClick={showNavbar}>
-            БРОНЬ СТОЛИКА
-          </a>
+          <a onClick={() => setActiveBtnZale(true)}>АРЕНДА ЗАЛА</a>
           <img src={Arrow}></img>
         </div>
 
@@ -40,6 +41,8 @@ const Navbar: React.FC<NavbarProps> = ({ showNavbar, active }) => {
           <img src={Close}></img>
         </button>
       </nav>
+      <ContactsPopup active={isActiveContact} setActive={setActiveContact} />
+      <PopupZale active={isActiveBtnZale} setActive={setActiveBtnZale} />
     </header>
   );
 };

@@ -84,3 +84,14 @@
 .popupcontact_window-inputs a > span {
   font-weight: 900;
 }
+
+@media screen and (max-width: 767px) {
+  .popupcontact_window-inputs {
+    color: black;
+    font-size: 15px;
+  }
+}
+
+.popupcontact_window-inputs a {
+  color: black;
+}

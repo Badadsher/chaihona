@@ -76,3 +76,16 @@ nav {
 .navbaroff {
   display: none;
 }
+.leftpanel-center a {
+  color: white;
+}
+
+.main-elements-mid a:active {
+  color: white !important;
+  text-decoration: none;
+}
+
+.main-elements-mid a:link {
+  color: white !important;
+  text-decoration: none;
+}

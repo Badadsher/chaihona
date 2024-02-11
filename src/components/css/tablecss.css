@@ -111,8 +111,8 @@
   }
 
   .tablebuy-inputwindow_view {
-    width: 350px;
-    height: 600px;
+    width: 320px;
+    height: 420px;
   }
 
   .tablebuy-name {
@@ -125,6 +125,13 @@
   }
 
   .tablebuy-inputwindow_view-object select {
-    width: auto;
+    width: 247px;
+  }
+  .view-object_first {
+    margin-top: 20px;
+  }
+
+  .tablebuy-inputwindow {
+    margin-top: 40px;
   }
 }

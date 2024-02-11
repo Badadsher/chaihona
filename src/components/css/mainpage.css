@@ -206,9 +206,13 @@
     width: 188px;
     height: 66px;
     margin-top: 25px;
+    text-align: center;
+    align-items: center;
   }
   .right-panel_text button > a {
     font-size: 23px;
+    font-weight: 600;
+    text-align: center;
   }
 
   .right-panel_text > h1 {
@@ -272,5 +276,9 @@
   .right-panel_menu {
     align-items: center;
     justify-content: center;
+  }
+
+  .main-elements-mid a:active {
+    color: white;
   }
 }
