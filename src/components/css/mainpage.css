@@ -28,7 +28,7 @@
 .right-panel_up a {
   font-weight: 900;
   font-size: 15px;
-  color: #f2da85;
+  color: #f2da85 !important;
   margin-top: 18px;
   margin-bottom: 12px;
   text-decoration: none;
@@ -232,7 +232,11 @@
   }
 
   .main-elements-left {
-    margin-left: 19px;
+    margin-left: 0px;
+  }
+
+  .main-elements_navbar {
+    justify-content: center;
   }
   .main-elements-left > img {
     width: 60px;

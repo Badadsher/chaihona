@@ -19,6 +19,7 @@ import { CSSTransition } from "react-transition-group";
 
 import "./css/mainpage.css";
 import PopupZale from "./PopupZale";
+import Navbar from "./navbar";
 import ContactsPopup from "./ContactsPopup";
 const MainPage: React.FC = () => {
   const menuPhoto: Array<string> = [
@@ -37,16 +38,17 @@ const MainPage: React.FC = () => {
   ];
 
   const [isActiveBtnZale, setActiveBtnZale] = useState(false);
-  const [active, setActive] = useState(false);
   const [isActiveContact, setActiveContact] = useState(false);
   const [currentSlide, setSlide] = useState(0);
   const [currentFade, setFade] = useState("fade-in");
 
+  const [navbarState, setNavbarState] = useState(false);
+
+  const showNavbar = () => {
+    setNavbarState(!navbarState);
+  };
+
   useEffect(() => {
-    // const timer = setInterval(() => {
-    //   setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
-    //   setFade("fade-in");
-    // }, 6000);
     const timer = setInterval(() => {
       setSlide((prevIndex) => (prevIndex + 1) % menuPhoto.length);
       setFade("fade-in");
@@ -67,16 +69,22 @@ const MainPage: React.FC = () => {
     <div className="main">
       <div className="main-elements">
         <div className="main-elements_navbar">
+          <Navbar
+            active={navbarState}
+            setActive={setNavbarState}
+            showNavbar={showNavbar}
+          ></Navbar>
           <div className="main-elements-left">
             <img src={Logo}></img>
           </div>
+
           <div className="main-elements-mid">
             <a href="#map">МЫ НА КАРТЕ</a>
             <a href="#tablebuyicon">БРОНЬ СТОЛИКА</a>
           </div>
 
           <div className="main-elements-right">
-            <button className="nav-btn nav-close-btn">
+            <button className="" onClick={showNavbar}>
               <img src={Other}></img>
             </button>
           </div>
@@ -135,6 +143,7 @@ const MainPage: React.FC = () => {
           </div>
         </div>
       </div>
+
       <ContactsPopup active={isActiveContact} setActive={setActiveContact} />
       <PopupZale active={isActiveBtnZale} setActive={setActiveBtnZale} />
     </div>

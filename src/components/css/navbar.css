@@ -1,0 +1,78 @@
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: #121212;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbaractive {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.navbaroff {
+  -webkit-animation: fade-out 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation: fade-out 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.nav-btn {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  background: none;
+  outline: none;
+  border: none;
+}
+.nav-btn img {
+  width: 30px;
+}
+
+.navbaroff {
+  display: none;
+}
