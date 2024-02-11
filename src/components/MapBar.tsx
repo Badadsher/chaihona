@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/mapbar.css";
 import rest from "../assets/restarauntimg/logos/restall.png";
-import { YMaps, Map, GeoObject, Placemark } from "@pbe/react-yandex-maps";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const mapState = { center: [55.76, 37.64], zoom: 10 };
 const MapBar: React.FC = () => {

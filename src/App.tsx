@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import "./App.css";
 import Main from "./components/MainPage.jsx";
 import LeftPanel from "./components/leftPanel/LeftPanel.js";

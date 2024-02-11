@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Bake from "../assets/restarauntimg/bake.jpg";
 import BeerEat from "../assets/restarauntimg/beereat.jpg";
 import Cold from "../assets/restarauntimg/cold.jpg";
@@ -13,7 +13,7 @@ import Soup from "../assets/restarauntimg/soup.jpg";
 import Sweet from "../assets/restarauntimg/sweet.jpg";
 import Plov from "../assets/restarauntimg/plov.png";
 import Other from "../assets/restarauntimg/logos/other.png";
-import Close from "../assets/restarauntimg/logos/close.png";
+
 import Logo from "../assets/restarauntimg/logonew.png";
 import { CSSTransition } from "react-transition-group";
 

@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Close from "../assets/restarauntimg/logos/close.png";
 import Arrow from "../assets/restarauntimg/arrow.png";
 import ArrowLong from "../assets/restarauntimg/arrowlong.png";

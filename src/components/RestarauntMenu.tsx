@@ -25,7 +25,6 @@ import GarnirFC from "./menuList/Garnir.tsx";
 import SweetFC from "./menuList/Sweet.tsx";
 import ZakuskaFC from "./menuList/Zakuska.tsx";
 import MarketFC from "./PopupMarket.tsx";
-import Plov from "../assets/restarauntimg/plov.png";
 
 import Market from "../assets/restarauntimg/logos/market.png";
 import "./css/restarauntmenu.css";
