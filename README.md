@@ -23,8 +23,10 @@ https://yallatest.netlify.app/
 ---
 
 ## 📸 Скриншоты
-![Скриншот 1](Screenshots/gameplay2.png)
-
+![Скриншот 1](Screenshots/Screen0.png)
+![Скриншот 2](Screenshots/Screen2.png)
+![Скриншот 3](Screenshots/Screen4.png)
+![Скриншот 4](Screenshots/Screen1.png)
 ---
 ## 🚀 Запуск проекта
 
