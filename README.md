@@ -5,7 +5,7 @@
 ![React](https://img.shields.io/badge/React-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typeScript&style=flat&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram%20Bot-Integrated-blue?logo=telegram)
-
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 ---
 
 ## 🌐 Демонстрация
@@ -21,6 +21,9 @@ https://yallatest.netlify.app/
 - 🤖 **Telegram-уведомления** — заказ мгновенно приходит в чат Telegram-бота  
 - 💻 **Адаптивный дизайн** — отлично смотрится и на телефоне, и на компьютере
 - ⚛️ **React + Vite** — молниеносная сборка и работа
+- ⚙️ **Redux ToolKit** — стейт менеджер для отслеживания работы приложения
+- 🐳 **Docker-контейнер** — готовый образ для быстрого развертывания 
+- 
 ---
 
 ## 📸 Скриншоты
