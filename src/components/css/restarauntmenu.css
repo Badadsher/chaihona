@@ -37,6 +37,13 @@
   align-items: center;
 }
 
+.restarauntmenu-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .restarauntmenu-list_object img {
   border-radius: 29px;
 }
