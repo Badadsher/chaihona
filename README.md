@@ -3,7 +3,7 @@
 Добро пожаловать в **Chaihona** — современный сайт для чайхоны, где пользователи могут **просматривать меню, добавлять блюда в корзину и оформлять заказы**. Все заказы мгновенно отправляются в **Telegram-бот** для обработки персоналом 🧾📲
 
 ![React](https://img.shields.io/badge/React-blue?logo=react)
-![TypeScript](https://camo.githubusercontent.com/b53069b621e43488642f5e5569a9c2314540b0bb7f54702f0195db427e95e4d9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f747970657363726970742532302d2532333030374143432e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typeScript&style=flat&logoColor=white))
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typeScript&style=flat&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram%20Bot-Integrated-blue?logo=telegram)
 
 ---
