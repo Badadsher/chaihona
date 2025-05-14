@@ -1,8 +1,9 @@
-# 🫖 Chaihona — Сайт чайхоны на React 🍵
+# 🫖 Chaihona — Сайт чайхоны на React + TypeScript + ReduxTK 🍵
 
 Добро пожаловать в **Chaihona** — современный сайт для чайхоны, где пользователи могут **просматривать меню, добавлять блюда в корзину и оформлять заказы**. Все заказы мгновенно отправляются в **Telegram-бот** для обработки персоналом 🧾📲
 
 ![React](https://img.shields.io/badge/React-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typeScript&style=flat&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram%20Bot-Integrated-blue?logo=telegram)
 
 ---
