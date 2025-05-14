@@ -29,7 +29,6 @@ const PopupMarket: React.FC<PopupProps> = ({
       0
     );
     if (selectedProducts != null && number != "" && geo != "" && name != "") {
-      // Отправка данных на сервер
       fetch("http://localhost:8080/yalla/checker.php", {
         mode: "no-cors",
         method: "POST",
