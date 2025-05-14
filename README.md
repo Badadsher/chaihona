@@ -6,6 +6,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typeScript&style=flat&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram%20Bot-Integrated-blue?logo=telegram)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
+![Redux ToolKit](https://img.shields.io/badge/Redux_Toolkit-764ABC?logo=redux&logoColor=white)
 ---
 
 ## 🌐 Демонстрация
