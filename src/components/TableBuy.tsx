@@ -8,7 +8,7 @@ const TableBuy: React.FC = () => {
   const [guest, setGuest] = useState("");
   const [selectedValue, setSelectedValue] = useState("someOption");
   let restarauntName: string;
-  const handleChange = (event: any) => {
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
   };
   const handleButtonClick = (action: string) => {
@@ -24,8 +24,6 @@ const TableBuy: React.FC = () => {
       } else {
         restarauntName = "ул. Нагатинская д. 16";
       }
-
-      // Отправка данных на сервер
       fetch("http://localhost:8080/yalla/checker.php", {
         mode: "no-cors",
         method: "POST",
@@ -41,14 +39,12 @@ const TableBuy: React.FC = () => {
           action: action,
         }),
       })
-        .then((response) => response.text()) // Используем text() вместо json()
+        .then((response) => response.text())
         .then((data) => {
           try {
-            // Попытаемся разобрать данные как JSON
             const jsonData = JSON.parse(data);
             console.log("Ответ от сервера:", jsonData);
           } catch (error) {
-            // Если разбор JSON не удался, выведем данные как текст
             console.error("Ошибка при разборе JSON:", error);
             console.log("Текст ответа:", data);
           }
@@ -73,12 +69,14 @@ const TableBuy: React.FC = () => {
         <div className="tablebuy-inputwindow_view">
           <div className="tablebuy-inputwindow_view-object view-object_first">
             <input
+              type="text"
               placeholder="Имя"
               onChange={(e) => setName(e.target.value)}
             ></input>
           </div>
           <div className="tablebuy-inputwindow_view-object">
             <input
+              type="number"
               placeholder="Телефон"
               onChange={(e) => setNumber(e.target.value)}
             ></input>
@@ -91,6 +89,7 @@ const TableBuy: React.FC = () => {
           </div>
           <div className="tablebuy-inputwindow_view-object">
             <input
+              type="number"
               placeholder="Кол-во гостей"
               onChange={(e) => setGuest(e.target.value)}
             ></input>

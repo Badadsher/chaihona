@@ -13,22 +13,22 @@ import Salat from "../assets/restarauntimg/salat.jpg";
 import Soup from "../assets/restarauntimg/soup.jpg";
 import Sweet from "../assets/restarauntimg/sweet.jpg";
 
-import ColdFC from "./menuList/Cold.tsx";
-import SalatFC from "./menuList/Salat.tsx";
-import HotFC from "./menuList/Hot.tsx";
-import SoupFC from "./menuList/Soup.tsx";
-import FishFC from "./menuList/Fish.tsx";
-import HotFoodFC from "./menuList/HotFood.tsx";
-import LulaFC from "./menuList/Lula.tsx";
-import BakeFC from "./menuList/Bake.tsx";
-import GarnirFC from "./menuList/Garnir.tsx";
-import SweetFC from "./menuList/Sweet.tsx";
-import ZakuskaFC from "./menuList/Zakuska.tsx";
+import ColdFC from "././menuList/Components/Cold.tsx";
+import SalatFC from "./menuList/Components/Salat.tsx";
+import HotFC from "./menuList/Components/Hot.tsx";
+import SoupFC from "./menuList/Components/Soup.tsx";
+import FishFC from "./menuList/Components/Fish.tsx";
+import HotFoodFC from "./menuList/Components/HotFood.tsx";
+import LulaFC from "./menuList/Components/Lula.tsx";
+import BakeFC from "./menuList/Components/Bake.tsx";
+import GarnirFC from "./menuList/Components/Garnir.tsx";
+import SweetFC from "./menuList/Components/Sweet.tsx";
+import ZakuskaFC from "./menuList/Components/Zakuska.tsx";
 import MarketFC from "./PopupMarket.tsx";
 
 import Market from "../assets/restarauntimg/logos/market.png";
 import "./css/restarauntmenu.css";
-import Drinks from "./menuList/Drinks.tsx";
+import Drinks from "./menuList/Components/Drinks.tsx";
 
 const RestarauntMenu: React.FC = () => {
   const [marketState, setMarketState] = useState(false);

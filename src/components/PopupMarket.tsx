@@ -20,18 +20,14 @@ const PopupMarket: React.FC<PopupProps> = ({
   const [name, setName] = useState("");
   const [geo, setGeo] = useState("");
   const handleButtonClick = (action: string) => {
-    // var formattedOrders = selectedProducts.map(function (order) {
-    //   return {
-    //     title: order.title,
-    //     price: order.price,
-    //   };
-    // });
-
-    var formattedOrders = selectedProducts.map(
+    const formattedOrders = selectedProducts.map(
       (product) => `${product.title}-ЦЕНА ${product.price}Р`
     );
-    var dataToSend = formattedOrders.join(",");
-    let price = selectedProducts.reduce((total, item) => total + item.price, 0);
+    const dataToSend = formattedOrders.join(",");
+    const price = selectedProducts.reduce(
+      (total, item) => total + item.price,
+      0
+    );
     if (selectedProducts != null && number != "" && geo != "" && name != "") {
       // Отправка данных на сервер
       fetch("http://localhost:8080/yalla/checker.php", {
@@ -49,14 +45,12 @@ const PopupMarket: React.FC<PopupProps> = ({
           geo: geo,
         }),
       })
-        .then((response) => response.text()) // Используем text() вместо json()
+        .then((response) => response.text())
         .then((data) => {
           try {
-            // Попытаемся разобрать данные как JSON
             const jsonData = JSON.parse(data);
             console.log("Ответ от сервера:", jsonData);
           } catch (error) {
-            // Если разбор JSON не удался, выведем данные как текст
             console.error("Ошибка при разборе JSON:", error);
             console.log("Текст ответа:", data);
           }
@@ -101,14 +95,17 @@ const PopupMarket: React.FC<PopupProps> = ({
           </div>
           <div className="valueWaiter">
             <input
+              type="number"
               placeholder="ТЕЛЕФОН"
               onChange={(e) => setNumber(e.target.value)}
             ></input>{" "}
             <input
+              type="text"
               placeholder="ИМЯ"
               onChange={(e) => setName(e.target.value)}
             ></input>{" "}
             <input
+              type="text"
               placeholder="АДРЕС"
               onChange={(e) => setGeo(e.target.value)}
             ></input>{" "}

@@ -1,22 +1,29 @@
 import React, { useState } from "react";
-import LulaData from "../jsons/lula.json";
+import LulaData from "../../jsons/lula.json";
 
-import LulaTelyat from "../menuList/restMenu/lula/lulatelyat.jpg";
-import SashlikChaihona from "../menuList/restMenu/lula/ShashlikChaihona.jpg";
-import UchPanza from "../menuList/restMenu/lula/ShashlikUchPanza.jpg";
-import Semechka from "../menuList/restMenu/lula/BaranSemechka.jpg";
-import BaranKost from "../menuList/restMenu/lula/ShashlikBaranKostochka.jpg";
-import BaranRebro from "../menuList/restMenu/lula/ShashlikBaranRebro.jpg";
-import BaranKare from "../menuList/restMenu/lula/KareBaran.jpg";
-import ChickenShashlik from "../menuList/restMenu/lula/SashlikChicken.jpg";
-import ShampLula from "../menuList/restMenu/lula/ShampinyonLula.jpg";
-import Bayram from "../menuList/restMenu/lula/bayram.jpg";
-import Order from "../Order";
+import LulaTelyat from "../../menuList/restMenu/lula/lulatelyat.jpg";
+import SashlikChaihona from "../../menuList/restMenu/lula/ShashlikChaihona.jpg";
+import UchPanza from "../../menuList/restMenu/lula/ShashlikUchPanza.jpg";
+import Semechka from "../../menuList/restMenu/lula/BaranSemechka.jpg";
+import BaranKost from "../../menuList/restMenu/lula/ShashlikBaranKostochka.jpg";
+import BaranRebro from "../../menuList/restMenu/lula/ShashlikBaranRebro.jpg";
+import BaranKare from "../../menuList/restMenu/lula/KareBaran.jpg";
+import ChickenShashlik from "../../menuList/restMenu/lula/SashlikChicken.jpg";
+import ShampLula from "../../menuList/restMenu/lula/ShampinyonLula.jpg";
+import Bayram from "../../menuList/restMenu/lula/bayram.jpg";
+import Order from "../../Order";
 
 interface LulaProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
+}
+
+interface LulaItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
 }
 
 const Lula: React.FC<LulaProps> = ({ onData, switcher, active }) => {
@@ -48,7 +55,7 @@ const Lula: React.FC<LulaProps> = ({ onData, switcher, active }) => {
   ];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: LulaItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу

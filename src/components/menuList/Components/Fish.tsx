@@ -1,23 +1,31 @@
 import React, { useState } from "react";
-import FishData from "../jsons/fish.json";
+import FishData from "../../jsons/fish.json";
 
-import Sibas from "../menuList/restMenu/fish/sibas.jpg";
-import Dorado from "../menuList/restMenu/fish/dorado.jpg";
-import LososTeriyake from "../menuList/restMenu/fish/lososteriyake.jpg";
-import CrabCotlets from "../menuList/restMenu/fish/CrabCotlets.jpg";
-import Sazan from "../menuList/restMenu/fish/sazan.jpg";
-import FileSudak from "../menuList/restMenu/fish/FileSudaka.jpg";
-import LososSardin from "../menuList/restMenu/fish/LososSardinski.jpg";
-import Lingvini from "../menuList/restMenu/fish/lingvinicrab.jpg";
-import Spagetti from "../menuList/restMenu/fish/spagettitrufel.jpg";
-import Sous from "../menuList/restMenu/fish/souses.png";
-import Order from "../Order";
+import Sibas from "../../menuList/restMenu/fish/sibas.jpg";
+import Dorado from "../../menuList/restMenu/fish/dorado.jpg";
+import LososTeriyake from "../../menuList/restMenu/fish/lososteriyake.jpg";
+import CrabCotlets from "../../menuList/restMenu/fish/CrabCotlets.jpg";
+import Sazan from "../../menuList/restMenu/fish/sazan.jpg";
+import FileSudak from "../../menuList/restMenu/fish/FileSudaka.jpg";
+import LososSardin from "../../menuList/restMenu/fish/LososSardinski.jpg";
+import Lingvini from "../../menuList/restMenu/fish/lingvinicrab.jpg";
+import Spagetti from "../../menuList/restMenu/fish/spagettitrufel.jpg";
+import Sous from "../../menuList/restMenu/fish/souses.png";
+import Order from "../../Order";
 
 interface FishProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
 }
+
+interface FishItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
+}
+
 const Fish: React.FC<FishProps> = ({ onData, switcher, active }) => {
   const [buttonState, setButtonState] = useState(
     Array.from({ length: FishData.length }, () => false)
@@ -37,7 +45,7 @@ const Fish: React.FC<FishProps> = ({ onData, switcher, active }) => {
   ];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: FishItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу

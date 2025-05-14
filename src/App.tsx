@@ -14,28 +14,26 @@ import TableBuy from "./components/TableBuy.js";
 const App: React.FC = () => {
   return (
     <>
-      <React.Fragment>
-        <div>
-          <div className="page">
-            <div className="left">
-              <LeftPanel
-                ArrowLong={ArrowLong}
-                Arrow={Arrow}
-                Logo={Logo}
-              ></LeftPanel>
-            </div>
+      <div>
+        <div className="page">
+          <div className="left">
+            <LeftPanel
+              ArrowLong={ArrowLong}
+              Arrow={Arrow}
+              Logo={Logo}
+            ></LeftPanel>
+          </div>
 
-            <div className="sections">
-              <Main></Main>
-              <Info></Info>
-              <RestarauntMenu></RestarauntMenu>
-              <TableBuy></TableBuy>
-              <MapBar></MapBar>
-            </div>
+          <div className="sections">
+            <Main></Main>
+            <Info></Info>
+            <RestarauntMenu></RestarauntMenu>
+            <TableBuy></TableBuy>
+            <MapBar></MapBar>
           </div>
         </div>
-        <Footer></Footer>
-      </React.Fragment>
+      </div>
+      <Footer></Footer>
     </>
   );
 };

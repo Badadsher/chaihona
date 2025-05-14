@@ -1,41 +1,55 @@
 import React, { useState } from "react";
-import SoupData from "../jsons/soups.json";
+import HotFoodData from "../../jsons/hotfood.json";
 
-import Shurpa from "../menuList/restMenu/soup/shurpa.jpg";
-import ChuchvaraShurpa from "../menuList/restMenu/soup/chuchvarashurpa.jpg";
-import ShurpaFrik from "../menuList/restMenu/soup/shurpafrik.jpg";
-import Mastava from "../menuList/restMenu/soup/mastava.jpg";
-import Lagman from "../menuList/restMenu/soup/lagmanuygur.jpg";
-import ChickenFrik from "../menuList/restMenu/soup/chickenfrik.jpg";
-import Okroshka from "../menuList/restMenu/soup/okroshka.jpg";
-import Borsh from "../menuList/restMenu/soup/borsh.jpg";
-import Tomatoe from "../menuList/restMenu/soup/tomatoe.jpg";
-import Order from "../Order";
-interface SoupProps {
+import Plov from "../../menuList/restMenu/hotfood/plov.jpg";
+import Manti from "../../menuList/restMenu/hotfood/manti.jpg";
+import JizBaran from "../../menuList/restMenu/hotfood/jizbaran.jpg";
+import KazanKabob from "../../menuList/restMenu/hotfood/kazankabob.jpg";
+import Kaurma from "../../menuList/restMenu/hotfood/kaurmalagman.jpg";
+import CuchvaraDungan from "../../menuList/restMenu/hotfood/ChuchvaraDagman.jpg";
+import Dolma from "../../menuList/restMenu/hotfood/dolma.jpg";
+import Vaguri from "../../menuList/restMenu/hotfood/vaguri.jpg";
+import JizzUygur from "../../menuList/restMenu/hotfood/uygurjiz.jpg";
+import SpagettiBoloneze from "../../menuList/restMenu/hotfood/spagettiboloneze.jpg";
+import Pene from "../../menuList/restMenu/hotfood/Penne.jpg";
+import Souses from "../../menuList/restMenu/fish/souses.png";
+import Order from "../../Order";
+
+interface HotFoodProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
 }
 
-const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
+interface HotFoodItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
+}
+
+const HotFood: React.FC<HotFoodProps> = ({ onData, switcher, active }) => {
   const [buttonState, setButtonState] = useState(
-    Array.from({ length: SoupData.length }, () => false)
+    Array.from({ length: HotFoodData.length }, () => false)
   );
 
   const imageArray = [
-    Shurpa,
-    ChuchvaraShurpa,
-    ShurpaFrik,
-    Mastava,
-    Lagman,
-    ChickenFrik,
-    Okroshka,
-    Borsh,
-    Tomatoe,
+    Plov,
+    Manti,
+    JizBaran,
+    KazanKabob,
+    Kaurma,
+    CuchvaraDungan,
+    Dolma,
+    Vaguri,
+    JizzUygur,
+    SpagettiBoloneze,
+    Pene,
+    Souses,
   ];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: HotFoodItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу
@@ -47,7 +61,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
   };
 
   const switcherFunc = () => {
-    switcher("soup");
+    switcher("hotfood");
     // setActive(!active);
   };
 
@@ -58,7 +72,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
     >
       <button onClick={() => switcherFunc()}>ВЕРНУТЬСЯ</button>
       <div className="menu-container">
-        {SoupData.map((item, index) => (
+        {HotFoodData.map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[index]}></img>
             <a>{item.name}</a>
@@ -72,7 +86,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
       </div>
 
       <div className="menu-container_mobile">
-        {SoupData.slice(0, 2).map((item, index) => (
+        {HotFoodData.slice(0, 2).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -85,7 +99,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {SoupData.slice(2, 4).map((item, index) => (
+        {HotFoodData.slice(2, 4).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -98,7 +112,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {SoupData.slice(4, 6).map((item, index) => (
+        {HotFoodData.slice(4, 6).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -111,7 +125,7 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {SoupData.slice(6, 8).map((item, index) => (
+        {HotFoodData.slice(6, 8).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -124,7 +138,20 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {SoupData.slice(8, 9).map((item, index) => (
+        {HotFoodData.slice(8, 10).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {HotFoodData.slice(10, 12).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -140,4 +167,4 @@ const Soup: React.FC<SoupProps> = ({ onData, active, switcher }) => {
   );
 };
 
-export default Soup;
+export default HotFood;

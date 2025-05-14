@@ -12,7 +12,6 @@ const PopupZale: React.FC<PopupZaleProps> = ({ active, setActive }) => {
   const [number, setNumberValue] = useState("");
   const handleButtonClick = (action: string) => {
     if (action == "actionZale" && number != "") {
-      // Отправка данных на сервер
       fetch("http://localhost:8080/yalla/checker.php", {
         mode: "no-cors",
         method: "POST",
@@ -24,14 +23,12 @@ const PopupZale: React.FC<PopupZaleProps> = ({ active, setActive }) => {
           action: action,
         }),
       })
-        .then((response) => response.text()) // Используем text() вместо json()
+        .then((response) => response.text())
         .then((data) => {
           try {
-            // Попытаемся разобрать данные как JSON
             const jsonData = JSON.parse(data);
             console.log("Ответ от сервера:", jsonData);
           } catch (error) {
-            // Если разбор JSON не удался, выведем данные как текст
             console.error("Ошибка при разборе JSON:", error);
             console.log("Текст ответа:", data);
           }
@@ -73,7 +70,10 @@ const PopupZale: React.FC<PopupZaleProps> = ({ active, setActive }) => {
 
         <div className="popupzale_window-rent">
           <a>Оставьте свой номер</a>
-          <input onChange={(e) => setNumberValue(e.target.value)}></input>
+          <input
+            type="number"
+            onChange={(e) => setNumberValue(e.target.value)}
+          ></input>
         </div>
         <div className="popupzale_window-rentbtn">
           <button onClick={() => handleButtonClick("actionZale")}>

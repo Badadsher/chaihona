@@ -1,17 +1,24 @@
 import React, { useState } from "react";
-import GarnirData from "../jsons/garnir.json";
+import GarnirData from "../../jsons/garnir.json";
 
-import Fri from "../menuList/restMenu/garnir/fri.jpg";
-import Village from "../menuList/restMenu/garnir/village.png";
-import Pure from "../menuList/restMenu/garnir/pure.png";
-import Mash from "../menuList/restMenu/garnir/mash.png";
+import Fri from "../../menuList/restMenu/garnir/fri.jpg";
+import Village from "../../menuList/restMenu/garnir/village.png";
+import Pure from "../../menuList/restMenu/garnir/pure.png";
+import Mash from "../../menuList/restMenu/garnir/mash.png";
 
-import Order from "../Order";
+import Order from "../../Order";
 
 interface GarnirProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
+}
+
+interface GarnirItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
 }
 
 const Garnir: React.FC<GarnirProps> = ({ onData, switcher, active }) => {
@@ -22,7 +29,7 @@ const Garnir: React.FC<GarnirProps> = ({ onData, switcher, active }) => {
   const imageArray = [Fri, Village, Pure, Mash];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: GarnirItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу

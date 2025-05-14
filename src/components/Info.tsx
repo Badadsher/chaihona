@@ -23,11 +23,6 @@ const Info: React.FC = () => {
   }, [photos.length]);
 
   return (
-    // <div className="info">
-    //   <div className="info_carousel">
-    //     <img src={photos[currentPhoto]}></img>
-    //   </div>
-    // </div>
     <div className="info">
       <div>
         <CSSTransition

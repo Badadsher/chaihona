@@ -1,30 +1,45 @@
 import React, { useState } from "react";
-import ZakuskaData from "../jsons/zakuska.json";
+import SweetData from "../../jsons/sweet.json";
+import Tort from "../../menuList/restMenu/sweet/tort.jpg";
+import Fistash from "../../menuList/restMenu/sweet/rouletfistash.png";
+import Maskar from "../../menuList/restMenu/sweet/maskarpone.png";
+import Browny from "../../menuList/restMenu/sweet/browny.png";
+import Sorbet from "../../menuList/restMenu/sweet/sorbet.png";
+import Ice from "../../menuList/restMenu/sweet/ise.png";
 
-import Grenki from "../menuList/restMenu/zakuska/chesnokgrenka.jpg";
-import Kurut from "../menuList/restMenu/zakuska/kurut.jpg";
-import Suhari from "../menuList/restMenu/zakuska/suhari.jpg";
-import Arais from "../menuList/restMenu/zakuska/arachis.jpg";
-import Fistash from "../menuList/restMenu/zakuska/fistash.jpeg";
-import Cheaps from "../menuList/restMenu/zakuska/chips.jpg";
+import Order from "../../Order";
 
-import Order from "../Order";
-
-interface ZakuskaProps {
+interface SweetProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
 }
-
-const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
+interface SweetItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
+}
+const Sweet: React.FC<SweetProps> = ({ onData, switcher, active }) => {
   const [buttonState, setButtonState] = useState(
-    Array.from({ length: ZakuskaData.length }, () => false)
+    Array.from({ length: SweetData.length }, () => false)
   );
 
-  const imageArray = [Grenki, Kurut, Suhari, Arais, Fistash, Cheaps];
+  const imageArray = [
+    Tort,
+    Tort,
+    Tort,
+    Tort,
+    Tort,
+    Fistash,
+    Maskar,
+    Browny,
+    Sorbet,
+    Ice,
+  ];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: SweetItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу
@@ -36,7 +51,7 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
   };
 
   const switcherFunc = () => {
-    switcher("zakuska");
+    switcher("sweet");
     // setActive(!active);
   };
 
@@ -47,7 +62,7 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
     >
       <button onClick={() => switcherFunc()}>ВЕРНУТЬСЯ</button>
       <div className="menu-container">
-        {ZakuskaData.map((item, index) => (
+        {SweetData.map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[index]}></img>
             <a>{item.name}</a>
@@ -61,7 +76,7 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
       </div>
 
       <div className="menu-container_mobile">
-        {ZakuskaData.slice(0, 2).map((item, index) => (
+        {SweetData.slice(0, 2).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -74,7 +89,7 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {ZakuskaData.slice(2, 4).map((item, index) => (
+        {SweetData.slice(2, 4).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -87,7 +102,33 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
         ))}
       </div>
       <div className="menu-container_mobile">
-        {ZakuskaData.slice(4, 6).map((item, index) => (
+        {SweetData.slice(4, 6).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SweetData.slice(6, 8).map((item, index) => (
+          <div key={index} className="restarauntmenu-list_objectcold">
+            <img src={imageArray[item.id - 1]}></img>
+            <a>{item.name}</a>
+            <p className="restarauntmenu-list_objectweight">{item.weight}</p>
+            <p>{item.price}Р</p>
+            <button onClick={() => handleButtonClick(item.id - 1, item)}>
+              {buttonState[item.id - 1] ? "В корзине" : "Добавить в корзину"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="menu-container_mobile">
+        {SweetData.slice(8, 10).map((item, index) => (
           <div key={index} className="restarauntmenu-list_objectcold">
             <img src={imageArray[item.id - 1]}></img>
             <a>{item.name}</a>
@@ -103,4 +144,4 @@ const Zakuska: React.FC<ZakuskaProps> = ({ onData, switcher, active }) => {
   );
 };
 
-export default Zakuska;
+export default Sweet;

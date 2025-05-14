@@ -143,8 +143,9 @@
   background-color: #f2da85;
   border-radius: 20px;
   width: 150px;
-  height: 25px;
-  align-self: flex-start;
+
+  text-align: center;
+
   margin-left: 100px;
   border: none;
   font-weight: 700;

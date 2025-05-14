@@ -101,6 +101,10 @@
   margin-bottom: 10px;
 }
 
+.order > p {
+  color: black;
+}
+
 .sumPrice {
   font-weight: 800;
 }

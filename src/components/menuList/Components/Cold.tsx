@@ -1,33 +1,41 @@
 import React, { useState } from "react";
-import ColdData from "../jsons/cold.json";
+import ColdData from "../../jsons/cold.json";
 
-import "./menuha.css";
-import CheeseAssorti from "./restMenu/cold/cheese.jpg";
-import FishAssorti from "./restMenu/cold/assortifish.jpg";
-import MeetAssorti from "./restMenu/cold/meet.jpg";
-import VegetableGryadka from "./restMenu/cold/vegetablegryadk.jpg";
-import FruitNarezka from "./restMenu/cold/fruit.jpg";
-import KrudoTunec from "./restMenu/cold/tunec.jpg";
-import TongueCow from "./restMenu/cold/cowtongue.jpg";
-import Kazi from "./restMenu/cold/horse.jpg";
-import VegetableNarezka from "./restMenu/cold/vegetablenarezka.jpg";
-import Seledka from "./restMenu/cold/seledkapotato.jpg";
-import Chakka from "./restMenu/cold/chakka.jpg";
-import Mozarella from "./restMenu/cold/tomatoemozarella.jpg";
-import Eggplant from "./restMenu/cold/eggplant.jpg";
-import Solenya from "./restMenu/cold/solenya.jpg";
-import Buratta from "./restMenu/cold/buratta.jpg";
-import Brinza from "./restMenu/cold/brinza.jpg";
-import Maslina from "./restMenu/cold/maslina.jpg";
-import TartarLosos from "./restMenu/cold/tartaravokado.jpg";
-import TartarTunec from "./restMenu/cold/tartartunetc.jpg";
-import TartarCow from "./restMenu/cold/tartarcow.jpg";
-import Order from "../Order";
+import "../css/menuha.css";
+
+import CheeseAssorti from "../restMenu/cold/cheese.jpg";
+import FishAssorti from "../restMenu/cold/assortifish.jpg";
+import MeetAssorti from "../restMenu/cold/meet.jpg";
+import VegetableGryadka from "../restMenu/cold/vegetablegryadk.jpg";
+import FruitNarezka from "../restMenu/cold/fruit.jpg";
+import KrudoTunec from "../restMenu/cold/tunec.jpg";
+import TongueCow from "../restMenu/cold/cowtongue.jpg";
+import Kazi from "../restMenu/cold/horse.jpg";
+import VegetableNarezka from "../restMenu/cold/vegetablenarezka.jpg";
+import Seledka from "../restMenu/cold/seledkapotato.jpg";
+import Chakka from "../restMenu/cold/chakka.jpg";
+import Mozarella from "../restMenu/cold/tomatoemozarella.jpg";
+import Eggplant from "../restMenu/cold/eggplant.jpg";
+import Solenya from "../restMenu/cold/solenya.jpg";
+import Buratta from "../restMenu/cold/buratta.jpg";
+import Brinza from "../restMenu/cold/brinza.jpg";
+import Maslina from "../restMenu/cold/maslina.jpg";
+import TartarLosos from "../restMenu/cold/tartaravokado.jpg";
+import TartarTunec from "../restMenu/cold/tartartunetc.jpg";
+import TartarCow from "../restMenu/cold/tartarcow.jpg";
+import Order from "../../Order";
 
 interface ColdProps {
   onData: (product: Order) => void;
   switcher: (action: string) => void;
   active: boolean;
+}
+
+interface ColdItem {
+  id: number;
+  name: string;
+  weight: string;
+  price: number;
 }
 
 const Cold: React.FC<ColdProps> = ({ onData, switcher, active }) => {
@@ -59,7 +67,7 @@ const Cold: React.FC<ColdProps> = ({ onData, switcher, active }) => {
   ];
 
   // Функция для обработки нажатия кнопки
-  const handleButtonClick = (index: number, item: any) => {
+  const handleButtonClick = (index: number, item: ColdItem) => {
     // Создаем копию массива состояний кнопок
     const newButtonState = [...buttonState];
     // Изменяем состояние конкретной кнопки по индексу
